@@ -8,6 +8,7 @@ import router from "@/router";
 import store from "@/store";
 // 引入reset.css
 import "reset-css";
+import "animate.css";
 import "element-ui/lib/theme-chalk/index.css";
 
 // 引入全局组件header

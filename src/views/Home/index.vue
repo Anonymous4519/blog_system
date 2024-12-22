@@ -1,6 +1,8 @@
 <template>
   <div class="container">
-    <Header v-show="isShow" />
+    <Transition>
+      <Header v-show="isShow" />
+    </Transition>
     <Banner />
     <Hot />
   </div>
@@ -44,5 +46,5 @@ export default {
 };
 </script>
 
-<style>
+<style lang="less" scoped>
 </style>

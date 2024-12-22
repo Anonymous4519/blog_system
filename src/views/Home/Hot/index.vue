@@ -120,10 +120,10 @@ export default {
       display: flex;
       flex-direction: column;
       align-items: center;
-      width: 300px;
-      height: 300px;
+      width: 400px;
+      height: 400px;
       background-color: #ccc;
-      margin-top: 20px;
+      margin: 20px;
     }
     .article_title {
       font-size: 18px;
@@ -135,8 +135,8 @@ export default {
       margin-bottom: 10px;
     }
     .article_icon {
-      width: 300px;
-      height: 170px;
+      width: 400px;
+      height: 220px;
       background-color: pink;
     }
     .description {
@@ -146,7 +146,7 @@ export default {
     .article_all {
       position: absolute;
       right: 5px;
-      bottom: 5px;
+      bottom: 10px;
     }
   }
 }
