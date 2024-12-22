@@ -1,5 +1,8 @@
 <template>
-  <div>关于</div>
+  <div>
+    <Header />
+    <div>关于</div>
+  </div>
 </template>
 
 <script>

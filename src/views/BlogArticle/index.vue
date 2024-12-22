@@ -1,5 +1,8 @@
 <template>
-  <div>博客文章</div>
+  <div>
+    <Header />
+    <div>博客文章</div>
+  </div>
 </template>
 
 <script>

@@ -1,5 +1,8 @@
 <template>
-  <div>友链</div>
+  <div>
+    <Header />
+    <div>友链</div>
+  </div>
 </template>
 
 <script>

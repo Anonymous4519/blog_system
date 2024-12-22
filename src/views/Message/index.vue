@@ -1,5 +1,8 @@
 <template>
-  <div>留言</div>
+  <div>
+    <Header />
+    <div>留言</div>
+  </div>
 </template>
 
 <script>

@@ -1,5 +1,12 @@
-const state = {};
-const mutations = {};
+const state = {
+  // 是否显示top栏
+  isShow: false,
+};
+const mutations = {
+  CHANGESHOW(state, value) {
+    state.isShow = value;
+  },
+};
 const actions = {};
 const getters = {};
 

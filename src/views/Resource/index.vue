@@ -1,5 +1,8 @@
 <template>
-  <div>资源</div>
+  <div>
+    <Header />
+    <div>资源</div>
+  </div>
 </template>
 
 <script>

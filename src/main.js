@@ -10,6 +10,10 @@ import store from "@/store";
 import "reset-css";
 import "element-ui/lib/theme-chalk/index.css";
 
+// 引入全局组件header
+import Header from "@/components/Header";
+Vue.component(Header.name, Header);
+
 Vue.config.productionTip = false;
 Vue.use(ElementUI);
 

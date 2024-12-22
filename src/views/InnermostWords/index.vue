@@ -1,5 +1,8 @@
 <template>
-  <div>心语</div>
+  <div>
+    <Header />
+    <div>心语</div>
+  </div>
 </template>
 
 <script>
