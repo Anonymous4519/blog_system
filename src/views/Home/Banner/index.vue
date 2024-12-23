@@ -1,8 +1,13 @@
 <template>
-  <div class="container">
+  <div class="container" ref="container">
     <div>
       <div class="banner">轮播区</div>
-      <button class="next_btn">按钮</button>
+      <el-button
+        class="next_btn"
+        type="success"
+        icon="el-icon-check"
+        circle
+      ></el-button>
     </div>
   </div>
 </template>
@@ -23,7 +28,7 @@ export default {
   background-color: skyblue;
   .next_btn {
     position: absolute;
-    bottom: 0;
+    bottom: 100px;
     left: 50%;
     transform: translateX(-50%);
   }

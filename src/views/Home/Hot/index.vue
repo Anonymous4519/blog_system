@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container" ref="container">
     <div class="hot_head">
       <h2 class="hot_article">热门文章</h2>
       <div class="title">
