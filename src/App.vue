@@ -17,10 +17,9 @@ export default {
   data() {
     return {};
   },
-  mounted() {},
+  mounted() { },
   methods: {},
 };
 </script>
 
-<style>
-</style>
+<style lang="less"></style>

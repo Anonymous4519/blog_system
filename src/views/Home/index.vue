@@ -1,20 +1,24 @@
 <template>
   <div class="container">
     <Header v-show="isShow" />
-    <Banner ref="banner" />
+    <Banner ref="banner" @scrollToHot="scrollToHot" />
     <Hot ref="hot" />
+    <Lore />
   </div>
 </template>
 
 <script>
+import { reqGetHeadList } from "@/api";
 import { mapState } from "vuex";
 import Banner from "@/views/Home/Banner";
 import Hot from "@/views/Home/Hot";
+import Lore from '@/views/Home/Lore'
 export default {
   name: "Home",
   components: {
     Hot,
     Banner,
+    Lore
   },
   data() {
     return {
@@ -25,8 +29,20 @@ export default {
   created() {
     window.addEventListener("scroll", this.handleScroll);
   },
-  mounted() {},
+  mounted() {
+    this.getHeadList()
+
+  },
+  activated() {
+  },
   methods: {
+    async getHeadList() {
+      const result = await reqGetHeadList()
+      console.log(result);
+
+    },
+
+
     handleScroll() {
       const banner = this.$refs.banner.$refs.container;
       const scrollTop =
@@ -38,7 +54,7 @@ export default {
         this.$store.commit("CHANGESHOW", !this.flag);
       }
 
-      if (scrollTop <= 0) {
+      if (scrollTop <= banner.offsetHeight / 2) {
         this.resetScrollStatus();
       }
 
@@ -49,7 +65,7 @@ export default {
         this.scrollToHot();
       }
     },
-
+    // 屏幕滚动跳转hot事件
     scrollToHot() {
       const hot = this.$refs.hot.$refs.container;
       if (this.hasScrolledToHot) return; // 防止重复滚动
@@ -79,5 +95,4 @@ export default {
 };
 </script>
 
-<style lang="less" scoped>
-</style>
+<style lang="less" scoped></style>

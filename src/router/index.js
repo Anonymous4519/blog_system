@@ -1,5 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
+import store from "@/store";
 
 Vue.use(VueRouter);
 
@@ -14,7 +15,7 @@ import Register from "@/views/Register";
 import InnermostWords from "@/views/InnermostWords";
 import Resource from "@/views/Resource";
 
-export default new VueRouter({
+let router = new VueRouter({
   routes: [
     {
       path: "/",
@@ -66,4 +67,16 @@ export default new VueRouter({
       component: Resource,
     },
   ],
+  linkActiveClass: "active", //希望元素动态添加的class名 “active”
 });
+
+// 全局前置路由守卫----初始化时调用、每次切换路由之前调用
+router.beforeEach((to, from, next) => {
+  console.log(to, from);
+  if (to.path === "/home") {
+    store.state.home.isShow = false;
+  }
+  next();
+});
+
+export default router;
